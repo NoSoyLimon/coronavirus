@@ -23,12 +23,15 @@ bloque5 = r.html.xpath('//*[@id="panel-102"]', first=True)
 testeos = bloque5.text.replace("Testeos del día\n","")
 positividad = (int(nuevos_casos)*100)/int(testeos)
 positividad = round(positividad, 2)
+positividad = str(positividad)
 
 
 #Actualmente se registran casos_activos casos positivos activos en todo el país y total_recuparados pacientes recuperados.
 
 
 
+
 print('El Ministerio de Salud de la Nación reportó este',week_days[week_num] , nuevos_casos,  'nuevos casos de coronavirus y', nuevos_muertos, 'fallecidos.')
 print('A partir de estos datos, el país ya registró', total_casos, 'contagios y', total_muertos, 'víctimas fatales desde el inicio de la pandemia.')
-print("En las últimas 24 horas se realizaron", testeos, "testeos, con una positividad del", positividad,"%.")
+print("En las últimas 24 horas se realizaron", testeos, "testeos, con una positividad del", positividad + "%.")
+#print(f'El area es: {area:,.2f}')
