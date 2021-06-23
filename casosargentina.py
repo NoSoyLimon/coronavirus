@@ -35,6 +35,18 @@ uti_pais = bloque9.text.replace(".",",")
 bloque10 = r.html.xpath('//*[@id="panel-109"]/div/div/div[1]/div/div[2]/div/plugin-component/panel-plugin-singlestat/grafana-panel/ng-transclude/div/div/span[1]/span', first=True)
 uti_amba = bloque10.text.replace(".",",")
 
+if int(nuevos_casos)>41080:
+    print('RECORD DE CASOS')
+
+if int(total_muertos)>100000:
+    print('ARGENTINA SUPERÓ LOS 100 MIL MUERTOS')
+
+if int(nuevos_muertos)>792:
+    print('RECORD DE MUERTES')
+
+if int(total_casos)>4500000:
+    print('ARGENTINA SUPERÓ LOS 4,5 MILLONES DE CONTAGIOS')    
+
 nuevos_casos = ('{:,}'.format(int(nuevos_casos)).replace(',','.'))
 nuevos_muertos = ('{:,}'.format(int(nuevos_muertos)).replace(',','.'))
 total_casos = ('{:,}'.format(int(total_casos)).replace(',','.'))
@@ -45,10 +57,15 @@ total_recuperados = ('{:,}'.format(int(total_recuperados)).replace(',','.'))
 internados = ('{:,}'.format(int(internados)).replace(',','.'))
 
 
+
+
 print('TÍTULO: Coronavirus en Argentina:', nuevos_casos, 'nuevos casos y', nuevos_muertos, 'muertos')
 print('BAJADA: Desde que inició la pandemia, el país ya registró', total_casos, 'contagios de COVID 19.')
+
 print('El Ministerio de Salud de la Nación reportó este',week_days[week_num] , nuevos_casos,  'nuevos casos de coronavirus y', nuevos_muertos, 'fallecidos.')
 print('A partir de estos datos, el país ya registró', total_casos, 'contagios y', total_muertos, 'víctimas fatales desde el inicio de la pandemia.')
+
+
 print("En las últimas 24 horas se realizaron", testeos, "testeos, con una positividad del", positividad + "%.")
 print('Actualmente se registran', casos_activos, 'casos positivos activos en todo el país y', total_recuperados, 'pacientes recuperados.')
 print('El reporte indica que son', internados, 'los pacientes internados en unidades de terapia intensiva, con un porcentaje de ocupación de camas de adultos de', uti_pais, 'en el país y del', uti_amba, 'en el Área Metropolitana de Buenos Aires (AMBA).')
