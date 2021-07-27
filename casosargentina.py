@@ -38,14 +38,14 @@ uti_amba = bloque10.text.replace(".",",")
 if int(nuevos_casos)>41080:
     print('RECORD DE CASOS')
 
-if int(total_muertos)>100000:
-    print('ARGENTINA SUPERÓ LOS 100 MIL MUERTOS')
+if int(total_muertos)>110000:
+    print('ARGENTINA SUPERÓ LOS 110 MIL MUERTOS')
 
 if int(nuevos_muertos)>792:
     print('RECORD DE MUERTES')
 
-if int(total_casos)>4500000:
-    print('ARGENTINA SUPERÓ LOS 4,5 MILLONES DE CONTAGIOS')    
+if int(total_casos)>5000000:
+    print('ARGENTINA SUPERÓ LOS 5 MILLONES DE CONTAGIOS')    
 
 nuevos_casos = ('{:,}'.format(int(nuevos_casos)).replace(',','.'))
 nuevos_muertos = ('{:,}'.format(int(nuevos_muertos)).replace(',','.'))
